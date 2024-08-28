@@ -22,7 +22,7 @@ namespace Talabat.APIs.Controllers
 
         // Get Or ReCreat eBasket
 
-        [HttpGet("{basketId}")]
+        [HttpGet]
 		public async Task<ActionResult<CustomerBasket>> GetCustomerBasket(string basketId)
 		{
 			var basket = await _basketRepository.GetBasketAsync(basketId);

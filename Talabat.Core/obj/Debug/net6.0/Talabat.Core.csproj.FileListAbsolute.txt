@@ -21,3 +21,4 @@ D:\Route\Back (.NET)\Eng Aliaa Tarek\06 API\API Project\Talabat.APIs.Solution(Se
 D:\Route\Back (.NET)\Eng Aliaa Tarek\06 API\API Project\Talabat.APIs.Solution(Session3)\Talabat.APIs.Solution\Talabat.Core\obj\Debug\net6.0\Talabat.Core.pdb
 D:\Route\Back (.NET)\Eng Aliaa Tarek\06 API\API Project\Talabat.APIs.Solution(Session3)\Talabat.APIs.Solution\Talabat.Core\obj\Debug\net6.0\ref\Talabat.Core.dll
 D:\Route\Back (.NET)\Eng Aliaa Tarek\06 API\API Project\Talabat.APIs.Solution\Talabat.Core\obj\Debug\net6.0\Talabat.Core.csproj.AssemblyReference.cache
+D:\Route\Back (.NET)\Eng Aliaa Tarek\06 API\API Project\Talabat.APIs.Solution\Talabat.Core\obj\Debug\net6.0\Talabat.Core.sourcelink.json

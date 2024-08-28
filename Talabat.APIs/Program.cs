@@ -45,6 +45,16 @@ namespace Talabat.APIs
 				return ConnectionMultiplexer.Connect(connection);
 			});
 
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy("MyPolicy", OPTIONS =>
+				{
+					OPTIONS.AllowAnyMethod();
+					OPTIONS.AllowAnyHeader();
+					OPTIONS.AllowAnyOrigin();
+				});
+			});
+
 			builder.Services.AddApplicationServices();
 
 			builder.Services.AddIdentityServices(builder.Configuration);
@@ -96,6 +106,7 @@ namespace Talabat.APIs
 			app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 			app.UseHttpsRedirection();
+			app.UseCors("MyPolicy");
 			app.UseAuthentication();
 			app.UseAuthorization();
 

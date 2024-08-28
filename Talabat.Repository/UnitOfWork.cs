@@ -35,7 +35,7 @@ namespace Talabat.Repository
 		{
 			var type = typeof(TEntity).Name;
 
-			if(_repositories.ContainsKey(type))
+			if(!_repositories.ContainsKey(type))
 			{
 				var Repository = new GenericRepository<TEntity>(_dbContext);
 				_repositories.Add(type, Repository);
