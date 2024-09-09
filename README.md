@@ -6,23 +6,27 @@ Talabat eCommerce API
 
 * Features
   - User Authentication: Register, login, and manage user accounts.
-  - Product Management: retrieve product information.
+  - Product Management: Retrieve, filter, sort, and paginate product information.
   - Order Management: Place orders, track order status, and manage orders.
   - Basket Management: Add, update, and remove items in the shopping cart.
   - Payment Integration: Integrates with payment gateways (e.g., Stripe) for processing payments.
+  - Error Handling: Consistent error handling throughout the API.
+  - Caching: Redis caching for performance improvement and efficient basket management.
 
   
 * Technologies Used
-  - ASP.NET Core
-  - Entity Framework Core (EF Core) for database operations
-  - SQL Server for data storage
-  - Redis for caching and basket management
-  - Onion Layer Architecture for clean separation of concerns
-  - Generic Repository Pattern for centralized data access operations
-  - Unit of Work Pattern for managing transactions across multiple repositories
-  - Specifications Design Pattern for encapsulating business rules and complex queries
-  - JWT for authentication
-  - Swagger for API documentation
+  - ASP.NET Core: The main framework for building the API.
+  - Entity Framework Core (EF Core): For database operations and ORM.
+  - SQL Server: Used as the primary data storage solution.
+  - Redis: For caching and basket management.
+  - Onion Layer Architecture: For clean separation of concerns.
+  - Generic Repository Pattern: For centralized and reusable data access operations.
+  - Unit of Work Pattern: For managing transactions across multiple repositories.
+  - Specifications Design Pattern: For encapsulating business rules and complex queries.
+  - JWT: For secure user authentication.
+  - Swagger: For API documentation and testing.
+  - Pagination, Filtering, and Sorting: For efficient data retrieval and presentation.
+  - Error Handling: Ensures robust error management across the application.
 
 
 * Contact
