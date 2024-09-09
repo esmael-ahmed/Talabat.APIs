@@ -30,6 +30,7 @@ namespace Talabat.APIs.Controllers
 
 		// Get All Products
 		[Authorize]
+		[CachedAttribute(600)]
 		[HttpGet]
 		public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams Params)
 		{
@@ -48,7 +49,8 @@ namespace Talabat.APIs.Controllers
 
 		// Get Product By Id
 		[Authorize]
-		[HttpGet("{id}")]
+        [CachedAttribute(600)]
+        [HttpGet("{id}")]
 		[ProducesResponseType(typeof(ProductToReturnDto), StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
 		public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
@@ -67,8 +69,9 @@ namespace Talabat.APIs.Controllers
 		}
 
 
-		// Get All Types
-		[HttpGet("Types")]
+        // Get All Types
+        [CachedAttribute(600)]
+        [HttpGet("Types")]
 		public async Task<ActionResult<IReadOnlyList<ProductType>>> GetTypes()
 		{
 			var types = await _unitOfWork.Repository<ProductType>().GetAllAsync();
@@ -77,8 +80,9 @@ namespace Talabat.APIs.Controllers
 		}
 
 
-		// Get All Brands
-		[HttpGet("Brands")]
+        // Get All Brands
+        [CachedAttribute(600)]
+        [HttpGet("Brands")]
 		public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetBrands()
 		{
 			var brands = await _unitOfWork.Repository<ProductBrand>().GetAllAsync();
